@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Users</title>
+</head>
+<body>
+    <p>This is Sparta</p>
+    <table border="1">
+    {%for user in Allusers %}
+    <tr>
+        <td>{{user.FirstName }}</td>
+        <td>{{user.SecondName}}</td>
+        <td>{{user.Tele}}</td>
+        <td>{{user.Email}}</td>
+        <td> <a href="edituser/{{user.id}}">  Edit</a>       </td>
+        <td>  <a href="/deleteuser/{{user.id}}"> Delete </a></td>
+    </tr>
+    {%endfor%}
+        
+
+    <a href="/"> Back </a>
+        
+</table>
+</body>
+</html>
